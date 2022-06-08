@@ -13,6 +13,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
       - name: install rails
-        run: apt install rails
+        run: sudo apt install rails
       - name: Run tests
         run: rails test
