@@ -13,6 +13,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
       - name: install rails
-        run: sudo apt install rails 2.7.4
+        run: sudo apt install ruby
+	with: rails version: 2.7.2
       - name: Run tests
         run: rails test
