@@ -12,7 +12,10 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-      - name: bundle install
-        run: bundle install
+      - uses: ruby/setup-ruby@359bebbc29cbe6c87da6bc9ea3bc930432750108
+        with:
+          ruby-version: '2.7.4' # Not needed with a .ruby-version file
+      - run: bundle install
+      - run: bundle exec rake
       - name: Run tests
         run: rails test
