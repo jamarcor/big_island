@@ -12,7 +12,7 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-      - name: install rails
-        run: sudo apt install rails
+      - name: bundle install
+        run: bundle install
       - name: Run tests
         run: rails test
